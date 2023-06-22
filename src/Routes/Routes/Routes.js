@@ -4,7 +4,7 @@ import Main from "../../Layout/Main";
 import Series from "../../Pages/Series/Series";
 import Natok from "../../Pages/Natok/Natok";
 import Home from "../../Pages/Home/Home/Home";
-// import ErrorPage from "../../Pages/Errorpage/Errorpage";
+import ErrorPage from "../../Pages/Errorpage/ErrorPage";
 
 
 
@@ -12,7 +12,7 @@ import Home from "../../Pages/Home/Home/Home";
 export const router = createBrowserRouter([
   {
     path: '/',
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     element: <Main></Main>,
     children: [
       {
