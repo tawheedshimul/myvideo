@@ -36,11 +36,12 @@ const Navbar = () => {
               className="flex-shrink-0"
             >
               <NavLink to="/">
-                <img
+                {/* <img
                   className="h-8 w-auto text-red-600"
                   src="/myvideos-logo.png"
                   alt="MyVideos"
-                />
+                /> */}
+                <h1 className="text-red-600 text-3xl font-bold">Vix</h1>
               </NavLink>
             </motion.div>
             <motion.div
@@ -170,43 +171,39 @@ const Navbar = () => {
           isMenuOpen ? 'block' : 'hidden'
         } sm:hidden absolute inset-x-0 top-16 bg-black`}
       >
-        {isMenuOpen && (
-          <React.Fragment>
-            <NavLink
-              exact
-              to="/"
-              activeClassName="text-red-600"
-              className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
-              onClick={closeMenu}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/movies"
-              activeClassName="text-red-600"
-              className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
-              onClick={closeMenu}
-            >
-              Movies
-            </NavLink>
-            <NavLink
-              to="/series"
-              activeClassName="text-red-600"
-              className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
-              onClick={closeMenu}
-            >
-              Series
-            </NavLink>
-            <NavLink
-              to="/natok"
-              activeClassName="text-red-600"
-              className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
-              onClick={closeMenu}
-            >
-              Natok
-            </NavLink>
-          </React.Fragment>
-        )}
+        <NavLink
+          exact
+          to="/"
+          activeClassName="text-red-600"
+          className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
+          onClick={closeMenu}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/movies"
+          activeClassName="text-red-600"
+          className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
+          onClick={closeMenu}
+        >
+          Movies
+        </NavLink>
+        <NavLink
+          to="/series"
+          activeClassName="text-red-600"
+          className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
+          onClick={closeMenu}
+        >
+          Series
+        </NavLink>
+        <NavLink
+          to="/natok"
+          activeClassName="text-red-600"
+          className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
+          onClick={closeMenu}
+        >
+          Natok
+        </NavLink>
       </motion.div>
     </nav>
   );
