@@ -1,0 +1,33 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Movie 1",
+        "genre": "Action",
+        "year": 2022,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDz0vtS4QRs5mIvAMnUejiKe3-GqfBCOHBPg&usqp=CAU"
+      },
+      {
+        "id": 2,
+        "title": "Movie 2",
+        "genre": "Comedy",
+        "year": 2019,
+        "image": "https://example.com/movie2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Movie 3",
+        "genre": "Drama",
+        "year": 2020,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUI-mKiSjCXdHqO1jeDQsntNO2BP7uDzVOg&usqp=CAU"
+      },
+      {
+        "id": 20,
+        "title": "Movie 20",
+        "genre": "Thriller",
+        "year": 2017,
+        "image": "https://example.com/movie20.jpg"
+      }
+    ]
+  }
+  
