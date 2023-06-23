@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import NotificationIcon from './NotificationIcon';
 
 const Navbar = () => {
@@ -14,49 +13,22 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const variants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-  };
-
-  const handleNavLinkClick = () => {
-    if (isMenuOpen) {
-      closeMenu();
-    }
-  };
-
   return (
     <nav className="fixed top-0 left-0 w-full bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="flex justify-between h-16 items-center">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            className="flex items-center"
-          >
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="flex-shrink-0"
-            >
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
               <NavLink to="/">
                 <h1 className="text-red-600 text-3xl font-bold">Vix</h1>
               </NavLink>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="hidden sm:flex sm:ml-6 space-x-4"
-            >
+            </div>
+            <div className="hidden sm:flex sm:ml-6 space-x-4">
               <NavLink
                 exact
                 to="/"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                onClick={handleNavLinkClick}
               >
                 Home
               </NavLink>
@@ -64,7 +36,6 @@ const Navbar = () => {
                 to="/movies"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                onClick={handleNavLinkClick}
               >
                 Movies
               </NavLink>
@@ -72,7 +43,6 @@ const Navbar = () => {
                 to="/series"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                onClick={handleNavLinkClick}
               >
                 Series
               </NavLink>
@@ -80,24 +50,13 @@ const Navbar = () => {
                 to="/natok"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                onClick={handleNavLinkClick}
               >
                 Natok
               </NavLink>
-            </motion.div>
-          </motion.div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            className="flex items-center"
-          >
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="ml-4 flex items-center"
-            >
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="ml-4 flex items-center">
               <NavLink
                 to="/signin"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
@@ -110,29 +69,12 @@ const Navbar = () => {
               >
                 Sign Up
               </NavLink>
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                className="notification-icon"
-              >
-                <NotificationIcon></NotificationIcon>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                className="search-bar"
-              >
-                {/* Search bar component */}
-              </motion.div>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="-mr-2 flex items-center sm:hidden"
-            >
+              <div className="notification-icon">
+                <NotificationIcon />
+              </div>
+              <div className="search-bar">{/* Search bar component */}</div>
+            </div>
+            <div className="-mr-2 flex items-center sm:hidden">
               <button
                 type="button"
                 onClick={toggleMenu}
@@ -161,17 +103,11 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{
-          opacity: isMenuOpen ? 1 : 0,
-          height: isMenuOpen ? 'auto' : 0,
-          transition: { duration: 0.3 },
-        }}
+      <div
         className={`${
           isMenuOpen ? 'block' : 'hidden'
         } sm:hidden absolute inset-x-0 top-16 bg-black`}
@@ -209,7 +145,7 @@ const Navbar = () => {
         >
           Natok
         </NavLink>
-      </motion.div>
+      </div>
     </nav>
   );
 };
