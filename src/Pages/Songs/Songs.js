@@ -5,6 +5,7 @@ import songsData from './SongsData.json';
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [showAll, setShowAll] = useState(false);
 
   const handleSearchInputChange = (event) => {
     setSearchTerm(event.target.value);
@@ -19,6 +20,12 @@ const SearchPage = () => {
   };
 
   const displaySongs = searchTerm === '' ? songsData : searchResults;
+
+  const visibleSongs = showAll ? displaySongs : displaySongs.slice(0, 8);
+
+  const handleSeeMoreClick = () => {
+    setShowAll(true);
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -39,7 +46,7 @@ const SearchPage = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {displaySongs.map((song) => (
+        {visibleSongs.map((song) => (
           <div key={song.videoId} className="mb-4">
             <h3 className="text-lg font-bold mb-1">{song.title}</h3>
             <p className="text-gray-600">{song.artist}</p>
@@ -54,6 +61,15 @@ const SearchPage = () => {
           </div>
         ))}
       </div>
+
+      {!showAll && displaySongs.length > 8 && (
+        <button
+          onClick={handleSeeMoreClick}
+          className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md mt-4 focus:outline-none"
+        >
+          See More
+        </button>
+      )}
     </div>
   );
 };

@@ -166,6 +166,174 @@
       "thumbnail": "https://example.com/dil_diyan_gallan_thumbnail.jpg",
       "videoId": "SAcpESN_Fk4",
       "youtubeLink": "https://www.youtube.com/watch?v=SAcpESN_Fk4"
-    }
+    },
+    {
+        "title": "Kabira",
+        "artist": "Arijit Singh, Harshdeep Kaur",
+        "thumbnail": "https://example.com/kabira_thumbnail.jpg",
+        "videoId": "jHNNMj5bNQw",
+        "youtubeLink": "https://www.youtube.com/watch?v=jHNNMj5bNQw"
+      },
+      {
+        "title": "Tera Ban Jaunga",
+        "artist": "Akhil Sachdeva, Tulsi Kumar",
+        "thumbnail": "https://example.com/tera_ban_jaunga_thumbnail.jpg",
+        "videoId": "aaOrKxv0hP8",
+        "youtubeLink": "https://www.youtube.com/watch?v=aaOrKxv0hP8"
+      },
+      {
+        "title": "Pee Loon",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/pee_loon_thumbnail.jpg",
+        "videoId": "3ba7dNMfOis",
+        "youtubeLink": "https://www.youtube.com/watch?v=3ba7dNMfOis"
+      },
+      {
+        "title": "Jeena Jeena",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/jeena_jeena_thumbnail.jpg",
+        "videoId": "yFTvbcNhEgc",
+        "youtubeLink": "https://www.youtube.com/watch?v=yFTvbcNhEgc"
+      },
+      {
+        "title": "Dil Diyan Gallan",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/dil_diyan_gallan_thumbnail.jpg",
+        "videoId": "SAcpESN_Fk4",
+        "youtubeLink": "https://www.youtube.com/watch?v=SAcpESN_Fk4"
+      },
+      {
+        "title": "Tere Sang Yaara",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/tere_sang_yaara_thumbnail.jpg",
+        "videoId": "B1HJ3baO_-4",
+        "youtubeLink": "https://www.youtube.com/watch?v=B1HJ3baO_-4"
+      },
+      {
+        "title": "Woh Lamhe Woh Baatein",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/woh_lamhe_woh_baatein_thumbnail.jpg",
+        "videoId": "0Zx2Jjgmbsw",
+        "youtubeLink": "https://www.youtube.com/watch?v=0Zx2Jjgmbsw"
+      },
+      {
+        "title": "Pehli Nazar Mein",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/pehli_nazar_mein_thumbnail.jpg",
+        "videoId": "V5-Pk2P5uds",
+        "youtubeLink": "https://www.youtube.com/watch?v=V5-Pk2P5uds"
+      },
+      {
+        "title": "Tere Bina",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/tere_bina_thumbnail.jpg",
+        "videoId": "WhtAowOhR7M",
+        "youtubeLink": "https://www.youtube.com/watch?v=WhtAowOhR7M"
+      },
+      {
+        "title": "Tu Jaane Na",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/tu_jaane_na_thumbnail.jpg",
+        "videoId": "5T1PrKwLfpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=5T1PrKwLfpg"
+      },
+      {
+        "title": "Tera Hone Laga Hoon",
+        "artist": "Atif Aslam, Alisha Chinai",
+        "thumbnail": "https://example.com/tera_hone_laga_hoon_thumbnail.jpg",
+        "videoId": "C_XkTKoDI18",
+        "youtubeLink": "https://www.youtube.com/watch?v=C_XkTKoDI18"
+      },
+      {
+        "title": "Main Rang Sharbaton Ka",
+        "artist": "Atif Aslam, Chinmayi Sripada",
+        "thumbnail": "https://example.com/main_rang_sharbaton_ka_thumbnail.jpg",
+        "videoId": "k2z9mki1eZE",
+        "youtubeLink": "https://www.youtube.com/watch?v=k2z9mki1eZE"
+      },
+      {
+        "title": "Tajdar-e-Haram",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/tajdar_e_haram_thumbnail.jpg",
+        "videoId": "H84b2b2gRDs",
+        "youtubeLink": "https://www.youtube.com/watch?v=H84b2b2gRDs"
+      },
+      {
+        "title": "Doorie",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/doorie_thumbnail.jpg",
+        "videoId": "0MCfSokhBJc",
+        "youtubeLink": "https://www.youtube.com/watch?v=0MCfSokhBJc"
+      },
+      {
+        "title": "Bheegi Yaadein",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/bheegi_yaadein_thumbnail.jpg",
+        "videoId": "QgGy_PNysL8",
+        "youtubeLink": "https://www.youtube.com/watch?v=QgGy_PNysL8"
+      },
+      {
+        "title": "O Saathi",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/o_saathi_thumbnail.jpg",
+        "videoId": "7VEkRL6w798",
+        "youtubeLink": "https://www.youtube.com/watch?v=7VEkRL6w798"
+      },
+      {
+        "title": "Tere Liye",
+        "artist": "Atif Aslam, Shreya Ghoshal",
+        "thumbnail": "https://example.com/tere_liye_thumbnail.jpg",
+        "videoId": "arLvgyzYdu0",
+        "youtubeLink": "https://www.youtube.com/watch?v=arLvgyzYdu0"
+      },
+      {
+        "title": "Jal Pari",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/jal_pari_thumbnail.jpg",
+        "videoId": "tm-7WyT6k9A",
+        "youtubeLink": "https://www.youtube.com/watch?v=tm-7WyT6k9A"
+      },
+      {
+        "title": "Kuch Is Tarah",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/kuch_is_tarah_thumbnail.jpg",
+        "videoId": "YbUeZbBxVIU",
+        "youtubeLink": "https://www.youtube.com/watch?v=YbUeZbBxVIU"
+      },
+      {
+        "title": "Yakeen",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/yakeen_thumbnail.jpg",
+        "videoId": "ivrmUeEJGso",
+        "youtubeLink": "https://www.youtube.com/watch?v=ivrmUeEJGso"
+      },
+      {
+        "title": "Tera Naam Doon",
+        "artist": "Atif Aslam, Shalmali Kholgade",
+        "thumbnail": "https://example.com/tera_naam_doon_thumbnail.jpg",
+        "videoId": "FJ56RgmHgLY",
+        "youtubeLink": "https://www.youtube.com/watch?v=FJ56RgmHgLY"
+      },
+      {
+        "title": "Maula",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/maula_thumbnail.jpg",
+        "videoId": "PvwfRoF5bI4",
+        "youtubeLink": "https://www.youtube.com/watch?v=PvwfRoF5bI4"
+      },
+      {
+        "title": "Hona Tha Pyar",
+        "artist": "Atif Aslam, Hadiqa Kiani",
+        "thumbnail": "https://example.com/hona_tha_pyar_thumbnail.jpg",
+        "videoId": "HnJW-x-sJMQ",
+        "youtubeLink": "https://www.youtube.com/watch?v=HnJW-x-sJMQ"
+      },
+      {
+        "title": "Tere Bin",
+        "artist": "Atif Aslam",
+        "thumbnail": "https://example.com/tere_bin_thumbnail.jpg",
+        "videoId": "ZZWDAqq9SaI",
+        "youtubeLink": "https://www.youtube.com/watch?v=ZZWDAqq9SaI"
+      }
   ]
   

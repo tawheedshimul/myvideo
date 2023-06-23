@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const variants = {
@@ -27,24 +28,24 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} MyVideos. All rights reserved.
           </div>
           <div className="flex flex-col sm:flex-row text-center sm:space-x-4 sm:mt-0 mt-4">
-            <a
-              href="#"
+            <Link
+              to="/terms"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               Terms of Service
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/privacy"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/contact"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center mt-8">
