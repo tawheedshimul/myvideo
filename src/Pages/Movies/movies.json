@@ -1,33 +1,206 @@
-{
-    "movies": [
-      {
-        "id": 1,
-        "title": "Movie 1",
-        "genre": "Action",
-        "year": 2022,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDz0vtS4QRs5mIvAMnUejiKe3-GqfBCOHBPg&usqp=CAU"
-      },
-      {
-        "id": 2,
-        "title": "Movie 2",
-        "genre": "Comedy",
-        "year": 2019,
-        "image": "https://example.com/movie2.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Movie 3",
-        "genre": "Drama",
-        "year": 2020,
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUI-mKiSjCXdHqO1jeDQsntNO2BP7uDzVOg&usqp=CAU"
-      },
-      {
-        "id": 20,
-        "title": "Movie 20",
-        "genre": "Thriller",
-        "year": 2017,
-        "image": "https://example.com/movie20.jpg"
-      }
-    ]
+[
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Main huin Lucky",
+    "artist": "Arijit Singh",
+    "thumbnail": "dsfslfj",
+    "videoId": "Yu8YJM7JVmc",
+    "youtubeLink": "https://www.youtube.com/watch?v=5ykF0QMN6bk&ab_channel=Goldmines"
+  },
+  {
+    "title": "Channa Mereya",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/channa_mereya_thumbnail.jpg",
+    "videoId": "z-diRlyLGzo",
+    "youtubeLink": "https://www.youtube.com/watch?v=z-diRlyLGzo"
+  },
+  {
+    "title": "Agar Tum Saath Ho",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/agar_tum_saath_ho_thumbnail.jpg",
+    "videoId": "KtPv7IEhWRA",
+    "youtubeLink": "https://www.youtube.com/watch?v=KtPv7IEhWRA"
+  },
+  {
+    "title": "Phir Bhi Tumko Chaahunga",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/phir_bhi_tumko_chaahunga_thumbnail.jpg",
+    "videoId": "MzFIO2Bf1dQ",
+    "youtubeLink": "https://www.youtube.com/watch?v=MzFIO2Bf1dQ"
+  },
+  {
+    "title": "Agar Tum Saath Ho",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/agar_tum_saath_ho_thumbnail.jpg",
+    "videoId": "KtPv7IEhWRA",
+    "youtubeLink": "https://www.youtube.com/watch?v=KtPv7IEhWRA"
+  },
+  {
+    "title": "Phir Bhi Tumko Chaahunga",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/phir_bhi_tumko_chaahunga_thumbnail.jpg",
+    "videoId": "MzFIO2Bf1dQ",
+    "youtubeLink": "https://www.youtube.com/watch?v=MzFIO2Bf1dQ"
+  },
+  {
+    "title": "Agar Tum Saath Ho",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/agar_tum_saath_ho_thumbnail.jpg",
+    "videoId": "KtPv7IEhWRA",
+    "youtubeLink": "https://www.youtube.com/watch?v=KtPv7IEhWRA"
+  },
+  {
+    "title": "Phir Bhi Tumko Chaahunga",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/phir_bhi_tumko_chaahunga_thumbnail.jpg",
+    "videoId": "MzFIO2Bf1dQ",
+    "youtubeLink": "https://www.youtube.com/watch?v=MzFIO2Bf1dQ"
+  },
+  {
+    "title": "Agar Tum Saath Ho",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/agar_tum_saath_ho_thumbnail.jpg",
+    "videoId": "KtPv7IEhWRA",
+    "youtubeLink": "https://www.youtube.com/watch?v=KtPv7IEhWRA"
+  },
+  {
+    "title": "Phir Bhi Tumko Chaahunga",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/phir_bhi_tumko_chaahunga_thumbnail.jpg",
+    "videoId": "MzFIO2Bf1dQ",
+    "youtubeLink": "https://www.youtube.com/watch?v=MzFIO2Bf1dQ"
+  },
+  {
+    "title": "Agar Tum Saath Ho",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/agar_tum_saath_ho_thumbnail.jpg",
+    "videoId": "KtPv7IEhWRA",
+    "youtubeLink": "https://www.youtube.com/watch?v=KtPv7IEhWRA"
+  },
+  {
+    "title": "Phir Bhi Tumko Chaahunga",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/phir_bhi_tumko_chaahunga_thumbnail.jpg",
+    "videoId": "MzFIO2Bf1dQ",
+    "youtubeLink": "https://www.youtube.com/watch?v=MzFIO2Bf1dQ"
+  },
+  {
+    "title": "Agar Tum Saath Ho",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/agar_tum_saath_ho_thumbnail.jpg",
+    "videoId": "KtPv7IEhWRA",
+    "youtubeLink": "https://www.youtube.com/watch?v=KtPv7IEhWRA"
+  },
+  {
+    "title": "Phir Bhi Tumko Chaahunga",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/phir_bhi_tumko_chaahunga_thumbnail.jpg",
+    "videoId": "MzFIO2Bf1dQ",
+    "youtubeLink": "https://www.youtube.com/watch?v=MzFIO2Bf1dQ"
+  },
+  {
+    "title": "Ae Dil Hai Mushkil",
+    "artist": "Arijit Singh",
+    "thumbnail": "https://example.com/ae_dil_hai_mushkil_thumbnail.jpg",
+    "videoId": "NMistXeV6Qs",
+    "youtubeLink": "https://www.youtube.com/watch?v=NMistXeV6Qs"
   }
   
+]
