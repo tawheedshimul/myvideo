@@ -4,6 +4,7 @@ import Main from "../../Layout/Main";
 import Series from "../../Pages/Series/Series";
 import Natok from "../../Pages/Natok/Natok";
 import Home from "../../Pages/Home/Home/Home";
+import Songs from "../../Pages/Songs/Songs";
 import ErrorPage from "../../Pages/Errorpage/ErrorPage";
 
 
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: '/series',
         element: <Series></Series>
+      },
+      {
+        path: '/Songs',
+        element: <Songs></Songs>
       },
     //   {
     //     path: '/services',

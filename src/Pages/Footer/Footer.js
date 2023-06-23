@@ -51,7 +51,7 @@ const Footer = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="bg-white rounded-full py-2 px-4 text-black font-bold flex items-center"
+            className="bg-red-800 rounded-full py-2 px-4 text-black font-bold flex items-center"
             onClick={scrollToTop}
           >
             <svg

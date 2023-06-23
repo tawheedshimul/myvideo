@@ -48,12 +48,19 @@ const Navbar = () => {
                 Series
               </NavLink>
               <NavLink
-                to="/natok"
+               to="/natok"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               >
                 Natok
-              </NavLink>
+              </NavLink> 
+              <NavLink
+               to="/songs"
+                activeClassName="text-red-600"
+                className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+              >
+                Songs
+              </NavLink> 
             </div>
           </div>
           <div className="flex items-center">
