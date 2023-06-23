@@ -155,6 +155,14 @@ const Navbar = () => {
         >
           Natok
         </NavLink>
+        <NavLink
+          to="/songs"
+          activeClassName="text-red-600"
+          className="block text-white hover:text-gray-200 py-2 px-4 rounded-md text-base font-medium transition-colors duration-300"
+          onClick={closeMenu}
+        >
+          Songs
+        </NavLink>
       </div>
     </nav>
   );
