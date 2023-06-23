@@ -6,11 +6,11 @@ const Footer = () => {
     <footer className="bg-black py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-gray-300">
+          <div className="text-gray-300 text-center">
             <h4 className="text-lg font-semibold mb-4">About Us</h4>
             <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-          <div className="text-gray-300">
+          <div className="text-center text-gray-300">
             <h4 className="text-lg font-semibold mb-4">Links</h4>
             <ul className="space-y-2">
               <li>
@@ -39,7 +39,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="text-gray-300">
+          <div className="text-center text-gray-300">
             <h4 className="text-lg font-semibold mb-4">Social Media</h4>
             <ul className="space-y-2">
               <li>
@@ -76,8 +76,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-800 py-4">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+      <div className="bg-red-600 py-6 mt-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-100 text-sm">
           &copy; {new Date().getFullYear()} MyVideos. All rights reserved.
         </div>
       </div>
