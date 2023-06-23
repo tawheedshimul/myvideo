@@ -19,6 +19,12 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
+  const handleNavLinkClick = () => {
+    if (isMenuOpen) {
+      closeMenu();
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
@@ -36,11 +42,6 @@ const Navbar = () => {
               className="flex-shrink-0"
             >
               <NavLink to="/">
-                {/* <img
-                  className="h-8 w-auto text-red-600"
-                  src="/myvideos-logo.png"
-                  alt="MyVideos"
-                /> */}
                 <h1 className="text-red-600 text-3xl font-bold">Vix</h1>
               </NavLink>
             </motion.div>
@@ -55,6 +56,7 @@ const Navbar = () => {
                 to="/"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={handleNavLinkClick}
               >
                 Home
               </NavLink>
@@ -62,6 +64,7 @@ const Navbar = () => {
                 to="/movies"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={handleNavLinkClick}
               >
                 Movies
               </NavLink>
@@ -69,6 +72,7 @@ const Navbar = () => {
                 to="/series"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={handleNavLinkClick}
               >
                 Series
               </NavLink>
@@ -76,6 +80,7 @@ const Navbar = () => {
                 to="/natok"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={handleNavLinkClick}
               >
                 Natok
               </NavLink>
