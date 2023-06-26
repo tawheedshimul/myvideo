@@ -1,82 +1,77 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
 
-const SignUpPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    // Here you can add your sign-up logic
-    // For simplicity, we'll just log the name, email, and password to the console
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Password:', password);
-    // You can then redirect the user to another page or perform further actions
-  };
-
+const RegistrationPage = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="max-w-md w-full mx-auto">
-        <h2 className="text-2xl font-bold mb-4">Sign Up Page</h2>
-        <form onSubmit={handleSignUp} className="space-y-4">
-          <div>
-            <label className="block">Name:</label>
-            <input
-              className="border border-gray-300 rounded px-3 py-2 w-full"
-              type="text"
-              value={name}
-              onChange={handleNameChange}
-            />
-          </div>
-          <div>
-            <label className="block">Email:</label>
-            <input
-              className="border border-gray-300 rounded px-3 py-2 w-full"
-              type="email"
-              value={email}
-              onChange={handleEmailChange}
-            />
-          </div>
-          <div>
-            <label className="block">Password:</label>
-            <input
-              className="border border-gray-300 rounded px-3 py-2 w-full"
-              type="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-          </div>
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
-            type="submit"
-          >
-            Sign Up
-          </button>
-        </form>
-        <div className="mt-4 flex justify-center">
-          <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-2">
-            Google
-          </button>
-          <button className="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded">
-            GitHub
-          </button>
+    <div className="min-h-screen bg-gradient-to-br from-purple-800 to-purple-500 flex items-center justify-center">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:max-w-md mx-4">
+        <div className="px-10 py-8">
+          <h2 className="text-3xl text-center text-gray-800 font-bold mb-6">Registration</h2>
+          <form>
+            <div className="mb-6">
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <div className="mr-3">
+                  <FaUser className="text-gray-400" />
+                </div>
+                <input
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-2 leading-tight focus:outline-none"
+                  type="text"
+                  placeholder="Full Name"
+                />
+              </div>
+            </div>
+            <div className="mb-6">
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <div className="mr-3">
+                  <FaEnvelope className="text-gray-400" />
+                </div>
+                <input
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-2 leading-tight focus:outline-none"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div className="mb-6">
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <div className="mr-3">
+                  <FaLock className="text-gray-400" />
+                </div>
+                <input
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-2 leading-tight focus:outline-none"
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div className="mb-6">
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <div className="mr-3">
+                  <FaLock className="text-gray-400" />
+                </div>
+                <input
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-2 leading-tight focus:outline-none"
+                  type="password"
+                  placeholder="Retype Password"
+                />
+              </div>
+            </div>
+            <div>
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded w-full transition duration-300 ease-in-out">
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="bg-gray-100 px-10 py-4">
+          <p className="text-gray-800 text-center">
+            Already have an account?{' '}
+            <a href="#" className="text-purple-600 hover:text-purple-800">Log In</a>
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default SignUpPage;
+export default RegistrationPage;

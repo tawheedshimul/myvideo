@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import NotificationIcon from './NotificationIcon';
-// import SearchBar from './SearchBar';
+import SearchBar from './SearchBar';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +13,8 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const [user, setUser] = useState({})
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black">
@@ -48,41 +50,54 @@ const Navbar = () => {
                 Series
               </NavLink>
               <NavLink
-               to="/natok"
+                to="/natok"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               >
                 Natok
-              </NavLink> 
+              </NavLink>
               <NavLink
-               to="/songs"
+                to="/songs"
                 activeClassName="text-red-600"
                 className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               >
                 Songs
-              </NavLink> 
+              </NavLink>
             </div>
           </div>
           <div className="flex items-center">
             <div className="ml-4 flex items-center">
-              <NavLink
-                to="/login"
-                className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-              >
-                Login
-              </NavLink>
-              <NavLink
-                to="/signup"
-                className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-              >
-                Sign Up
-              </NavLink>
+              <div className="search-bar">
+                <SearchBar></SearchBar>
+              </div>
+              {user.uid ?
+                <NavLink
+                  to="/"
+                  className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                >
+                  Log Out
+                </NavLink>
+                :
+                <>
+                  <NavLink
+                    to="/login"
+                    className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                  >
+                    Login
+                  </NavLink>
+                  <NavLink
+                    to="/signup"
+                    className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                  >
+                    Sign Up
+                  </NavLink>
+                </>
+
+              }
               <div className="notification-icon">
                 <NotificationIcon />
               </div>
-              <div className="search-bar">
-                {/* <SearchBar></SearchBar> */}
-              </div>
+
             </div>
             <div className="-mr-2 flex items-center sm:hidden">
               <button
@@ -118,9 +133,8 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`${
-          isMenuOpen ? 'block' : 'hidden'
-        } sm:hidden absolute inset-x-0 top-16 bg-black`}
+        className={`${isMenuOpen ? 'block' : 'hidden'
+          } sm:hidden absolute inset-x-0 top-16 bg-black`}
       >
         <NavLink
           exact

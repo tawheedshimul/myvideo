@@ -1,90 +1,69 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Here you can add your authentication logic
-    // For simplicity, we'll just check if the email and password match a hardcoded value
-    if (email === 'example@example.com' && password === 'password') {
-      setIsLoggedIn(true);
-    }
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-
-  if (isLoggedIn) {
-    return (
-      <div className="p-4">
-        <h2 className="text-2xl font-bold mb-4">Welcome, {email}!</h2>
-        <button
-          className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mb-4"
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
-        <div className="flex">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mr-2">
-            Google
-          </button>
-          <button className="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded">
-            GitHub
-          </button>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-800 to-purple-500 flex items-center justify-center">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full sm:max-w-md mx-4">
+        <div className="px-10 py-8">
+          <h2 className="text-3xl text-center text-gray-800 font-bold mb-6">Login</h2>
+          <form>
+            <div className="mb-6">
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <div className="mr-3">
+                  <AiOutlineMail className="text-gray-400" />
+                </div>
+                <input
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-2 leading-tight focus:outline-none"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div className="mb-6">
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <div className="mr-3">
+                  <AiOutlineLock className="text-gray-400" />
+                </div>
+                <input
+                  className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-2 leading-tight focus:outline-none"
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-between mb-6">
+              <label className="flex items-center">
+                <input type="checkbox" className="form-checkbox mr-2" />
+                <span className="text-gray-700">Remember me</span>
+              </label>
+              <a href="#" className="text-purple-600 hover:text-purple-800">Forgot password?</a>
+            </div>
+            <div>
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded w-full transition duration-300 ease-in-out">
+                Log In
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="bg-gray-100 px-10 py-4">
+          <p className="text-gray-800 text-center">
+            Don't have an account?{' '}
+            <a href="#" className="text-purple-600 hover:text-purple-800">Sign Up</a>
+          </p>
+          <div className="flex items-center justify-center mt-4">
+            <button className="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded mr-4">
+              <FaGoogle className="mr-2" />
+              <p>Google</p>
+            </button>
+            <button className="flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded">
+              <FaGithub className="mr-2" />
+              <p>GitHub</p>
+            </button>
+          </div>
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Login Page</h2>
-      <form onSubmit={handleLogin}>
-        <div className="mb-4">
-          <label className="block text-gray-700">Email:</label>
-          <input
-            className="border border-gray-300 rounded px-3 py-2 w-full"
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Password:</label>
-          <input
-            className="border border-gray-300 rounded px-3 py-2 w-full"
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </div>
-        <button
-          className="bg-red-400 hover:bg-red-500 text-white py-2 px-4 rounded mb-4"
-          type="submit"
-        >
-          Login
-        </button>
-        <div className="flex">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mr-2">
-            Google
-          </button>
-          <button className="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded">
-            GitHub
-          </button>
-        </div>
-      </form>
     </div>
   );
 };

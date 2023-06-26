@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-purple-500 to-pink-500"
+      className="bg-gradient-to-r from-black to-red-500"
       initial="hidden"
       animate="visible"
       variants={heroVariants}
@@ -39,7 +39,7 @@ const Hero = () => {
           >
             <Link
               to="/movies"
-              className="inline-block bg-white text-purple-500 hover:text-purple-700 py-3 px-6 rounded-lg font-semibold uppercase text-lg transition-colors duration-300"
+              className="inline-block bg-black text-red-500 hover:text-red-500 py-3 px-6 rounded-lg font-semibold uppercase text-lg transition-colors duration-300"
             >
               Browse Movies
             </Link>
