@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './footer.css'
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import './footer.css';
 
 const Footer = () => {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
     <footer className="bg-black py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,6 +23,7 @@ const Footer = () => {
                 <Link
                   to="/terms"
                   className="text-gray-300 hover:text-white transition-colors duration-300"
+                  onClick={handleLinkClick}
                 >
                   Terms of Service
                 </Link>
@@ -26,6 +32,7 @@ const Footer = () => {
                 <Link
                   to="/privacy"
                   className="text-gray-300 hover:text-white transition-colors duration-300"
+                  onClick={handleLinkClick}
                 >
                   Privacy Policy
                 </Link>
@@ -34,6 +41,7 @@ const Footer = () => {
                 <Link
                   to="/contact"
                   className="text-gray-300 hover:text-white transition-colors duration-300"
+                  onClick={handleLinkClick}
                 >
                   Contact Us
                 </Link>
@@ -42,35 +50,35 @@ const Footer = () => {
           </div>
           <div className="text-center text-gray-300">
             <h4 className="text-lg text-red-600 font-semibold mb-4">Social Media</h4>
-            <ul className="space-y-2">
+            <ul className="flex justify-center items-center space-x-4">
               <li>
                 <a
                   href="https://www.facebook.com"
-                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                  className="text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center rounded-full h-10 w-10"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Facebook
+                  <FaFacebook size={24} />
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.twitter.com"
-                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                  className="text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center rounded-full h-10 w-10"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Twitter
+                  <FaTwitter size={24} />
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.instagram.com"
-                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                  className="text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center rounded-full h-10 w-10"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Instagram
+                  <FaInstagram size={24} />
                 </a>
               </li>
             </ul>
@@ -78,7 +86,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-red-700 py-4 mt-8">
-        <div className=" container text-black font-bold mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-100 text-sm ">
+        <div className="container text-black font-bold mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-100 text-sm">
           &copy; 2022 - {new Date().getFullYear()} MyVideos. All rights reserved.
         </div>
       </div>

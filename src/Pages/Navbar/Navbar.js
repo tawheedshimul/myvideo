@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import NotificationIcon from './NotificationIcon';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,9 +67,9 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <div className="ml-4 flex items-center">
-              <div className="search-bar">
+              {/* <div className="search-bar">
                 <SearchBar></SearchBar>
-              </div>
+              </div> */}
               {user.uid ?
                 <NavLink
                   to="/"
