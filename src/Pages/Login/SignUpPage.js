@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../../Context/UserContext';
 
 const RegistrationPage = () => {
 
@@ -8,6 +9,10 @@ const RegistrationPage = () => {
   const handleLinkClick = () => {
     window.scrollTo(0, 0); // Scrolls to the top of the page
   };
+
+
+  const {createUser} = useContext(Authcontext);
+  console.log('createuser', createUser);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -17,6 +22,16 @@ const RegistrationPage = () => {
     const password = form.password.value;
     const retypePassword = form.retypePassword.value
     console.log(name, email, password, retypePassword);
+
+    createUser( email, password)
+    .then(result => {
+      const user = result.user;
+      console.log('rsultuser', user);
+      form.reset();
+    })
+    .catch(error => {
+      console.error(error);
+    })
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-800 to-purple-200 flex items-center justify-center">

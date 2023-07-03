@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../../Context/UserContext';
 
 const LoginPage = () => {
   // go to the top page 
@@ -9,12 +10,27 @@ const LoginPage = () => {
     window.scrollTo(0, 0); // Scrolls to the top of the page
   };
 
+  const {signIn} = useContext(Authcontext);
+  
   const handleSubmit = event => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
+
+    signIn(email, password)
+    .then(result => {
+      const user = result.user;
+      console.log('rsultuser', user);
+      form.reset();
+    })
+    .catch(error => {
+      console.error(error);
+    })
+
+
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-800 to-gray-100 flex items-center justify-center">

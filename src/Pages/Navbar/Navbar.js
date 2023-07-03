@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import NotificationIcon from './NotificationIcon';
+import { Authcontext } from '../../Context/UserContext';
 // import SearchBar from './SearchBar';
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const [user, setUser] = useState({})
+  const {user} = useContext(Authcontext);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-40 bg-black">
