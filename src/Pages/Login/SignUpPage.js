@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaLock, FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../../Context/UserContext';
 
@@ -11,7 +11,7 @@ const RegistrationPage = () => {
   };
 
 
-  const {createUser} = useContext(Authcontext);
+  const { createUser, signInWithGoogle } = useContext(Authcontext);
   console.log('createuser', createUser);
 
   const handleSubmit = event => {
@@ -23,15 +23,22 @@ const RegistrationPage = () => {
     const retypePassword = form.retypePassword.value
     console.log(name, email, password, retypePassword);
 
-    createUser( email, password)
+    createUser(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log('rsultuser', user);
+        form.reset();
+      })
+      .catch(error => {
+        console.error(error);
+      })
+  }
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
     .then(result => {
       const user = result.user;
-      console.log('rsultuser', user);
-      form.reset();
     })
-    .catch(error => {
-      console.error(error);
-    })
+    .catch(error => console.error(error));
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-800 to-purple-200 flex items-center justify-center">
@@ -102,10 +109,20 @@ const RegistrationPage = () => {
           <p className="text-gray-800 text-center">
             Already have an account?{' '}
             <Link
-            onClick={handleLinkClick}
-             to='/login' 
-             className="text-purple-600 hover:text-purple-800">Log In</Link>
+              onClick={handleLinkClick}
+              to='/login'
+              className="text-purple-600 hover:text-purple-800">Log In</Link>
           </p>
+          <div className="flex items-center justify-center mt-4">
+            <button onClick={handleGoogleSignIn} className="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded mr-4">
+              <FaGoogle className="mr-2" />
+              <p>Google</p>
+            </button>
+            <button className="flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded">
+              <FaGithub className="mr-2" />
+              <p>GitHub</p>
+            </button>
+          </div>
         </div>
       </div>
     </div>

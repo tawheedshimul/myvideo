@@ -77,7 +77,7 @@ const Navbar = () => {
               {/* <div className="search-bar">
                 <SearchBar></SearchBar>
               </div> */}
-              {user ?
+              {user?.uid?
                 <NavLink
                   onClick={handleSignOut}
                   to="/"
