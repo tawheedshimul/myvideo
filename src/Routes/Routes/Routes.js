@@ -28,11 +28,11 @@ export const router = createBrowserRouter([
 
       {
         path: '/movies',
-        element: <Movies></Movies>
+        element: <PrivateRoutes><Movies></Movies></PrivateRoutes>
       },
       {
         path: '/series',
-        element: <Series></Series>
+        element: <PrivateRoutes><Series></Series></PrivateRoutes>
       },
       {
         path: '/Songs',
