@@ -15,7 +15,13 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const {user} = useContext(Authcontext);
+  const {user , logOut} = useContext(Authcontext);
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.error(error));
+  }
 
   return (
     <nav className="fixed top-0 left-0 w-full z-40 bg-black">
@@ -71,12 +77,13 @@ const Navbar = () => {
               {/* <div className="search-bar">
                 <SearchBar></SearchBar>
               </div> */}
-              {user.uid ?
+              {user ?
                 <NavLink
+                  onClick={handleSignOut}
                   to="/"
                   className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                 >
-                  Log Out
+                  Sign Out
                 </NavLink>
                 :
                 <>
