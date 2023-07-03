@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Authcontext } from '../../Context/UserContext';
 
 const LoginPage = () => {
@@ -11,6 +11,7 @@ const LoginPage = () => {
   };
 
   const {signIn} = useContext(Authcontext);
+  const navigate = useNavigate();
   
   const handleSubmit = event => {
     event.preventDefault();
@@ -25,6 +26,7 @@ const LoginPage = () => {
       const user = result.user;
       console.log('rsultuser', user);
       form.reset();
+      navigate('/');
     })
     .catch(error => {
       console.error(error);

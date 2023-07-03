@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaUser, FaEnvelope, FaLock, FaGoogle, FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Authcontext } from '../../Context/UserContext';
 
 const RegistrationPage = () => {
@@ -13,6 +13,7 @@ const RegistrationPage = () => {
 
   const { createUser, signInWithGoogle } = useContext(Authcontext);
   console.log('createuser', createUser);
+  const navigate = useNavigate();
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -28,6 +29,7 @@ const RegistrationPage = () => {
         const user = result.user;
         console.log('rsultuser', user);
         form.reset();
+        navigate('/');
       })
       .catch(error => {
         console.error(error);
@@ -35,10 +37,10 @@ const RegistrationPage = () => {
   }
   const handleGoogleSignIn = () => {
     signInWithGoogle()
-    .then(result => {
-      const user = result.user;
-    })
-    .catch(error => console.error(error));
+      .then(result => {
+        const user = result.user;
+      })
+      .catch(error => console.error(error));
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-800 to-purple-200 flex items-center justify-center">

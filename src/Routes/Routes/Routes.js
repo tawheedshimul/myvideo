@@ -10,6 +10,7 @@ import LoginPage from "../../Pages/Login/LoginPage";
 import SignUpPage from "../../Pages/Login/SignUpPage";
 import TermsOfService from "../../Pages/Footer/TermsOfService";
 import ContactUsPage from "../../Pages/Footer/ContactUsPage";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 
 
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/Songs',
-        element: <Songs></Songs>
+        element: <PrivateRoutes><Songs></Songs></PrivateRoutes>
       },
       {
         path: '/login',
@@ -53,13 +54,13 @@ export const router = createBrowserRouter([
         path: '/contact',
         element: <ContactUsPage></ContactUsPage>
       },
-    //   {
-    //     path: '/services',
-    //     loader: async () => {
-    //       return fetch('https://jsonplaceholder.typicode.com/users')
-    //     },
-    //     element: <Services></Services>
-    //   },
+      //   {
+      //     path: '/services',
+      //     loader: async () => {
+      //       return fetch('https://jsonplaceholder.typicode.com/users')
+      //     },
+      //     element: <Services></Services>
+      //   },
       {
         path: '/natok',
         element: <Natok></Natok>
