@@ -30,7 +30,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <NavLink to="/">
-                <h1 className="text-red-600 text-3xl font-bold">VixBD</h1>
+                <h1 className="text-red-600 text-3xl font-bold">VdwBD</h1>
               </NavLink>
             </div>
             <div className="hidden sm:flex sm:ml-6 space-x-4">

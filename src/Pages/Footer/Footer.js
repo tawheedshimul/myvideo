@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import './footer.css';
+import { AiFillProfile } from 'react-icons/ai';
 
 const Footer = () => {
   const handleLinkClick = () => {
@@ -13,8 +14,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-gray-300 text-center">
-            <h4 className="text-lg text-red-600 font-semibold mb-4">About Us</h4>
-            <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h4 className="text-lg text-red-600 font-semibold mb-4">About Me</h4>
+            <p className="text-sm">
+              Hi, My name is Tawheed. I am the creator of this web site. Do you want to know more about me? Please follow this link: <a
+                href="www.tawheedshimul.vercel.app."
+                className="text-red-500 hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                tawheedshimul.vercel.app
+                {/* <AiFillProfile size={24}>tawheedshimul</AiFillProfile> */}
+              </a>
+            </p>
           </div>
           <div className="text-center text-gray-300">
             <h4 className="text-lg text-red-600 font-semibold mb-4">Links</h4>
