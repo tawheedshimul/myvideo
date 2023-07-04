@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import './footer.css';
-import { AiFillProfile } from 'react-icons/ai';
 
 const Footer = () => {
   const handleLinkClick = () => {
@@ -11,6 +10,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black py-8">
+      <hr className="border-t border-red-600 my-4" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-gray-300 text-center">

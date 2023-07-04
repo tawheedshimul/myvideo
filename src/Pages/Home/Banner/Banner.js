@@ -14,15 +14,16 @@
 // export default Banner;
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewsGrid = () => {
   return (
-    <div className="max-w-screen-xl p-5 mx-auto bg-black dark:bg-gray-800 dark:text-gray-100">
+    <div className="p-5 mx-auto bg-black dark:bg-gray-800 dark:text-gray-100">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="relative rounded flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style={{ backgroundImage: 'url("https://source.unsplash.com/random/240x320")' }}>
           <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
           <div className="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
-            <a rel="noopener noreferrer" href="#" className="px-3 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined">Politics</a>
+            <Link rel="noopener noreferrer" to='/songs' className="px-3 text-white bg-red-600 rounded hover:bg-red-900 py-2 text-xs font-semibold tracki uppercase dark:text-gray-100 bgundefined">Songs</Link>
             <div className="flex flex-col justify-start text-center dark:text-gray-100">
               <span className="text-3xl font-semibold leadi tracki">04</span>
               <span className="leadi uppercase">Aug</span>
