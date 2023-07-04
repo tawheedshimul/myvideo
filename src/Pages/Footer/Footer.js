@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="flex justify-center items-center space-x-4">
               <li>
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/tawheedshimul"
                   className="text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center rounded-full h-10 w-10"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -63,7 +63,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.twitter.com"
+                  href="https://www.twitter.com/tawheedshimul"
                   className="text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center rounded-full h-10 w-10"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/tawheedshimul"
                   className="text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 flex items-center justify-center rounded-full h-10 w-10"
                   target="_blank"
                   rel="noopener noreferrer"
