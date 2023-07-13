@@ -1,80 +1,79 @@
-import React, { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
-import series from './Series.json';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const FoodSearch = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const [error, setError] = useState('');
-  const [displayCount, setDisplayCount] = useState(10);
+const SeriesSearch = () => {
+  const [videos, setVideos] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const handleFoodSearch = () => {
-      if (searchTerm.trim() === '') {
-        setSearchResults(series);
-      } else {
-        const filteredItems = series.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    const fetchVideos = async () => {
+      try {
+        const response = await axios.get(
+          'https://www.googleapis.com/youtube/v3/search',
+          {
+            params: {
+              part: 'snippet',
+              q: searchQuery,
+              maxResults: 50,
+              key: 'AIzaSyAt7DOQwI8_FSPm2QvuLrZgWXQXnPf_UvU',
+            },
+          }
         );
-        setSearchResults(filteredItems);
+        setVideos(response.data.items);
+      } catch (error) {
+        console.error('Error occurred during API request:', error);
       }
     };
 
-    handleFoodSearch();
-  }, [searchTerm]);
+    fetchVideos();
+  }, [searchQuery]);
 
-  const handleSearchInputChange = (e) => {
-    setSearchTerm(e.target.value);
+  const playVideo = (videoId) => {
+    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-    }
-  };
-
-  const handleSeeMore = () => {
-    setDisplayCount((prevCount) => prevCount + 10);
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex items-center mb-4">
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Series Search</h1>
+      <div className="flex justify-center mb-4">
         <input
           type="text"
-          value={searchTerm}
-          onChange={handleSearchInputChange}
-          onKeyPress={handleKeyPress}
-          placeholder="Search for a series..."
-          className="border border-gray-300 rounded-md px-4 py-2 mr-2 w-full sm:w-auto"
+          value={searchQuery}
+          onChange={handleSearch}
+          placeholder="Search for series..."
+          className="border border-gray-400 rounded p-2 mr-2 w-1/2"
         />
-      </div>
-      {error && <p className="text-red-500 mb-4">{error}</p>}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {searchResults.length > 0 ? (
-          searchResults.slice(0, displayCount).map((result) => (
-            <div key={result.videoId} className="bg-white rounded-lg shadow-md p-4">
-              <h3 className="text-lg font-bold mb-1">{result.title}</h3>
-              <p className="text-gray-600">{result.artist}</p>
-              <div className="aspect-w-16 aspect-h-9">
-                <ReactPlayer url={result.youtubeLink} controls width="100%" height="100%" />
-              </div>
-            </div>
-          ))
-        ) : (
-          <p>No results found.</p>
-        )}
-      </div>
-      {searchResults.length > displayCount && (
         <button
-          onClick={handleSeeMore}
-          className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md"
+          onClick={() => setSearchQuery('')}
+          className="bg-gray-400 text-white rounded px-4 py-2"
         >
-          See More
+          Clear
         </button>
-      )}
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {videos.map((video) => (
+          <div
+            key={video.id.videoId}
+            className="bg-gray-200 rounded p-4 cursor-pointer"
+            onClick={() => playVideo(video.id.videoId)}
+          >
+            <img
+              src={video.snippet.thumbnails.medium.url}
+              alt={video.snippet.title}
+              className="w-full h-auto mb-2"
+            />
+            <div className="font-bold">{video.snippet.title}</div>
+            <div className="text-gray-700">{video.snippet.description}</div>
+            <div className="text-gray-500">Video ID: {video.id.videoId}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default FoodSearch;
+export default SeriesSearch;

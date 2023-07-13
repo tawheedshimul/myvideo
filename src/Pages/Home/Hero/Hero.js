@@ -26,8 +26,56 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white">
-            Welcome to MyVideos
+          <h1 className="text-5xl text-white font-bold mb-4 inline-block">
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '0.2s' }}
+            >
+              W
+            </span>
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '0.4s' }}
+            >
+              e
+            </span>
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '0.6s' }}
+            >
+              l
+            </span>
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '0.8s' }}
+            >
+              c
+            </span>
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '1s' }}
+            >
+              o
+            </span>
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '1.2s' }}
+            >
+              m
+            </span>
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '1.4s' }}
+            >
+              e
+            </span>
+           
+            <span
+              className="inline-block animate-bounce"
+              style={{ animationDelay: '1.6s' }}
+            >
+              !
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-white mt-4">
             Explore a world of entertainment at your fingertips

@@ -1,98 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
 
 const Carousel = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const carouselItemsRef = useRef(null);
+  const carouselWidth = useRef(0);
+  const [imageUrls, setImageUrls] = useState([]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveSlide((prevSlide) => (prevSlide === 4 ? 0 : prevSlide + 1));
-    }, 2000);
+    const fetchData = async () => {
+      const fetchedImageUrls = [
+        'https://source.unsplash.com/random/241x320',
+        'https://source.unsplash.com/random/242x320',
+        'https://source.unsplash.com/random/243x320',
+        'https://source.unsplash.com/random/244x320',
+        'https://source.unsplash.com/random/245x320',
+      ];
+      setImageUrls(fetchedImageUrls);
+    };
 
-    return () => clearInterval(intervalId); // Clear the interval on component unmount
-
+    fetchData();
   }, []);
 
-  const handleSlideChange = (slideIndex) => {
-    setActiveSlide(slideIndex);
-  };
+  useEffect(() => {
+    const carouselItems = carouselItemsRef.current;
+    carouselWidth.current = carouselItems.offsetWidth;
 
-  const renderSlides = () => {
-    const slideImages = [
-      "https://th.bing.com/th/id/OIP.jsiaZlS4s12vrcDW1HuDgAHaEK?w=328&h=184&c=7&r=0&o=5&pid=1.7",
-      "https://th.bing.com/th/id/OIP.njVmRCyEj6YPgLM0IZ69TQHaEK?pid=ImgDet&rs=1",
-      "https://th.bing.com/th/id/R.c33896539d68913f3b5c39eec9897501?rik=7YrE2mlL5%2fSLVg&pid=ImgRaw&r=0",
-      "https://th.bing.com/th/id/OIP.BWSlr_ZUcCyGyV60tUCFlAHaEo?pid=ImgDet&rs=1",
-      "https://th.bing.com/th/id/OIP._Hd0L2_05UjNetnWkWdaegHaD4?pid=ImgDet&rs=1",
-    ];
+    let currentIndex = 0;
+    let tl;
 
-    return slideImages.map((image, index) => (
-      <div
-        key={index}
-        className={`${
-          activeSlide === index ? "block" : "hidden"
-        } duration-700 ease-in-out`}
-        data-carousel-item
-      >
-        <img
-          src={image}
-          className="absolute block w-full h-full object-cover object-center"
-          alt={`Slide ${index + 1}`}
-        />
-      </div>
-    ));
-  };
+    const animateCarousel = () => {
+      currentIndex = (currentIndex + 1) % carouselItems.children.length;
+      tl.to(carouselItems, { x: -currentIndex * carouselWidth.current, duration: 0.8, ease: 'power3.inOut' });
+    };
 
-  const renderIndicators = () => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <button
-        key={index}
-        type="button"
-        className={`w-3 h-3 rounded-full ${
-          activeSlide === index ? "bg-white" : "bg-gray-500"
-        }`}
-        aria-current={activeSlide === index}
-        aria-label={`Slide ${index + 1}`}
-        data-carousel-slide-to={index}
-        onClick={() => handleSlideChange(index)}
-      ></button>
-    ));
-  };
+    tl = gsap.timeline();
+    tl.set(carouselItems, { x: -currentIndex * carouselWidth.current });
+    tl.call(animateCarousel);
 
-  const handlePrevClick = () => {
-    setActiveSlide((prevSlide) => (prevSlide === 0 ? 4 : prevSlide - 1));
-  };
-
-  const handleNextClick = () => {
-    setActiveSlide((prevSlide) => (prevSlide === 4 ? 0 : prevSlide + 1));
-  };
+    return () => {
+      tl.kill();
+    };
+  }, [imageUrls]);
 
   return (
-    <div id="default-carousel" className="relative w-full" data-carousel="slide">
-      {/* Carousel wrapper */}
-      <div className="relative aspect-w-2 aspect-h-1 md:aspect-h-2 overflow-hidden md:h-96">
-        {renderSlides()}
+    <div className="w-400 h-200 overflow-hidden">
+      <div className="flex" ref={carouselItemsRef}>
+        {imageUrls.map((imageUrl, index) => (
+          <div key={index} className="w-400 h-200">
+            <img src={imageUrl} alt={`Image ${index}`} className="object-cover w-full h-full" />
+          </div>
+        ))}
       </div>
-      {/* Slider indicators */}
-      <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-        {renderIndicators()}
-      </div>
-      {/* Slider controls */}
-      <button
-        type="button"
-        className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev
-        onClick={handlePrevClick}
-      >
-        {/* Previous button icon */}
-      </button>
-      <button
-        type="button"
-        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next
-        onClick={handleNextClick}
-      >
-        {/* Next button icon */}
-      </button>
     </div>
   );
 };
