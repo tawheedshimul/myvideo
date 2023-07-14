@@ -1,8 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import NotificationIcon from './NotificationIcon';
 import { Authcontext } from '../../Context/UserContext';
-// import SearchBar from './SearchBar';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -102,9 +100,6 @@ const Navbar = () => {
                 </>
 
               }
-              <div className="notification-icon">
-                <NotificationIcon />
-              </div>
 
             </div>
             <div className="-mr-2 flex items-center sm:hidden">

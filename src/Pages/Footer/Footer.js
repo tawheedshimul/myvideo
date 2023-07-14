@@ -16,15 +16,16 @@ const Footer = () => {
           <div className="text-gray-300 text-center">
             <h4 className="text-lg text-red-600 font-semibold mb-4">About Me</h4>
             <p className="text-sm">
-              Hi, My name is Tawheed. I am the creator of this web site. Do you want to know more about me? Please follow this link: <a
-                href="www.tawheedshimul.vercel.app."
+              Hi, My name is Tawheed. I am the creator of this web site. Do you want to know more about me? Please follow this link:
+              <a
+                href="https://tawheedshimul.vercel.app/"
                 className="text-red-500 hover:text-white transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 tawheedshimul.vercel.app
-                {/* <AiFillProfile size={24}>tawheedshimul</AiFillProfile> */}
               </a>
+
             </p>
           </div>
           <div className="text-center text-gray-300">
