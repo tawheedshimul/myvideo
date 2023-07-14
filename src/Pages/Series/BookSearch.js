@@ -15,7 +15,7 @@ const SeriesSearch = () => {
               part: 'snippet',
               q: searchQuery,
               maxResults: 50,
-              key: 'AIzaSyAt7DOQwI8_FSPm2QvuLrZgWXQXnPf_UvU',
+              key: 'AIzaSyDN-Gof-b7NAparJcn7wn-xXny1hlYL94M',
             },
           }
         );
